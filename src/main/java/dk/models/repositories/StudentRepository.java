@@ -69,7 +69,7 @@ public class StudentRepository implements IStudentRepository {
 
     @Override
     public Student login(Student st) {
-        SqlRowSet sqlRowSet = jdbc.queryForRowSet("SELECT * FROM studentdb.student WHERE id = '" + st.getStudentId() + "', password = '" + st.getPassword());
+        SqlRowSet sqlRowSet = jdbc.queryForRowSet("SELECT * FROM studentdb.student WHERE id = '" + st.getStudentId() + "' AND password = '" + st.getPassword() + "'");
         Student currentFucktard = new Student();
         if (sqlRowSet.next()) {
             int id = sqlRowSet.getInt("id");

@@ -7,8 +7,8 @@
 
 
     <form   method="Post"   th:action="@{/login}"   th:object="${student}">
-    <input   type="text"   th:field="*{studentId}"/>
-    <input   type="text"   th:field="*{password}"/>
+    <input   type="text"   th:field="*{studentId}" placeholder="StudentID"/>
+    <input   type="text"   th:field="*{password}" placeholder="Password"/>
 
     <input   type="submit"   value="Login" class="btn" />
     </form>

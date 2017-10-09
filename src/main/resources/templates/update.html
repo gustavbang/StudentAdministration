@@ -12,12 +12,13 @@
 <!-- student = @ModelAttribute -->
 <form   method="Post"   th:action="@{/update}"   th:object="${student}">
 
+
     <input   type="text"   th:field="*{studentId}" readonly="readonly" />
-    <input   type="text"   th:field="*{firstName}"   />
-    <input   type="text"   th:field="*{lastName}"/>
-    <input   type="text"   th:field="*{password}"/>
-    <input   type="date"   th:field="*{enrollmentDate}"/>
-    <input   type="text"   th:field="*{cpr}"/>
+    <input   type="text"   th:field="*{firstName}" placeholder="First Name" />
+    <input   type="text"   th:field="*{lastName}" placeholder="Last Name"/>
+    <input   type="text"   th:field="*{password}" placeholder="Password"/>
+    <input   type="date"   th:field="*{enrollmentDate}" placeholder="Enrollment Date"/>
+    <input   type="text"   th:field="*{cpr}" placeholder="CPR"/>
 
     <input   type="submit"   value="Update"  class="btn" />
 </form>

@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.RequestContextHolder;
+
+import java.util.HashMap;
 
 
 @Controller
@@ -18,6 +21,8 @@ public class UserController {
     
     @Autowired
     IStudentRepository studentRepo = new StudentRepository();
+
+    HashMap<String, Student> students = new HashMap();
 
     // Read All
     @GetMapping("/")
@@ -86,10 +91,12 @@ public class UserController {
 
        Student studentMember = studentRepo.login(skr);
        if(studentMember.getCpr() == null && studentMember.getPassword() == null) {
-           return "index";
+           return "loginFail";
        }
 
-    return null;
+       students.put(RequestContextHolder.currentRequestAttributes().getSessionId(), studentMember);
+
+        return "ExtremelySecret";
 
     }
 }
