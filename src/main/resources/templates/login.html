@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="C:\Users\gusta\IdeaProjects\studentadministration\src\main\resources\static\style.css"
+          th:href="@{style.css}"/>
+    <title>Login</title>
+
+
+    <form   method="Post"   th:action="@{/login}"   th:object="${student}">
+    <input   type="text"   th:field="*{studentId}"/>
+    <input   type="text"   th:field="*{password}"/>
+
+    <input   type="submit"   value="Login" class="btn" />
+    </form>
+</head>
+<body>
+
+</body>
+</html>

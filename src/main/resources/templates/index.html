@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student</title>
+    <link rel="stylesheet" href="C:\Users\gusta\IdeaProjects\studentadministration\src\main\resources\static\style.css"
+          th:href="@{style.css}"/>
+</head>
+<body>
+
+<h1> Student Administration</h1>
+<p>Students enrolled at KEA</p>
+<a href="/create" class="btn" >CREATE</a>
+<a href="/login" class="btn" id="pink" >LOGIN</a>
+
+
+<table>
+    <tr>
+        <td>Student Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Enrollment Date</td>
+        <td>CPR</td>
+        <td>Knapper</td>
+    </tr>
+    <tr th:each="students : ${students}">
+        <td th:text="${students.studentId}"></td>
+        <td th:text="${students.firstName}"></td>
+        <td th:text="${students.lastName}"></td>
+        <td th:text="${students.enrollmentDate}"></td>
+        <td th:text="${students.cpr}"></td>
+
+        <td>
+            <a th:href="@{/details(studentId=${students.studentId})}" class="btn" id="green" >DETAILS </a>
+            <a th:href="@{/update(studentId=${students.studentId})}" class="btn" id="orange" >UPDATE </a>
+
+             <a class="btn" href="#popup1" id="purple" >DELETE</a>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Are you sure you want to delete?</h2>
+                    <a class="btn" href="#" id="red" >CANCEL</a>
+
+                    <a th:href="@{/delete(studentId=${students.studentId})}" class="btn" id="purple" >DELETE</a>
+                </div>
+            </div>
+
+        </td>
+
+    </tr>
+</table>
+
+
+
+<img class="minion" src="minion.jpg" alt="Minion" />
+<img class="minion" src="minion2.png" alt="Minion2" />
+<img class="minion" src="minion3.png" alt="Minion3" />
+<img class="minion" src="minion4.png" alt="Minion3" />
+
+
+</body>
+</html>

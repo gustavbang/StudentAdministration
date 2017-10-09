@@ -1,0 +1,103 @@
+body {
+    font-family: Calibri;
+    background-image: url("background.jpg");
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%
+}
+
+td, th {
+    text-align: left;
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+h1, p {
+    color: antiquewhite;
+    text-shadow: 3px 5px 10px #ffffff;
+}
+
+/*   # = id
+     . = class
+ */
+
+.minion {
+    width: 304px;
+    height: 228px;
+    margin-top: 5px;
+}
+
+.btn {
+    background: deepskyblue;
+    color: white;
+    padding: 7px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 1px #888888;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+ }
+
+#green {
+    background-color: #4CAF50;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#red {
+    background-color: #f44336;
+}
+
+#pink {
+    background-color: hotpink;
+}
+
+
+.btn-create {
+    background-color: #4CAF50;
+}
+
+.btn-del {
+    background-color: #f44336;
+}
+
+/* her kommer popup menu css */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 100px auto;
+    text-align: center;
+    font: 14px Prototype, serif;
+    padding: 20px;
+    background: rgba(0,0,0,0.9);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+}

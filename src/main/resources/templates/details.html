@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+    <link rel="stylesheet" href="C:\Users\gusta\IdeaProjects\studentadministration\src\main\resources\static\style.css"
+          th:href="@{style.css}"/>
+</head>
+<body>
+
+<table>
+    <tr>
+<td th:text="${stu.studentId}"></td>
+<td th:text="${stu.firstName}"></td>
+<td th:text="${stu.lastName}"></td>
+<td th:text="${stu.enrollmentDate}"></td>
+<td th:text="${stu.cpr}"></td>
+    </tr>
+</table>
+
+<!-- begyndelsen på en knap
+<form   method="Post"   th:action="@{/delete}"   th:object="${student}">
+
+    <input   type="text"   th:field="*{stu.studentId}"   />
+    <input   type="submit"   value="Send"   />
+
+</form>
+-->
+
+</body>
+</html>

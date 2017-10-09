@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update dummy site</title>
+    <link rel="stylesheet" href="C:\Users\gusta\IdeaProjects\studentadministration\src\main\resources\static\style.css"
+          th:href="@{style.css}"/>
+</head>
+<body>
+
+<h1>Update Student</h1>
+
+<!-- student = @ModelAttribute -->
+<form   method="Post"   th:action="@{/update}"   th:object="${student}">
+
+    <input   type="text"   th:field="*{studentId}" readonly="readonly" />
+    <input   type="text"   th:field="*{firstName}"   />
+    <input   type="text"   th:field="*{lastName}"/>
+    <input   type="text"   th:field="*{password}"/>
+    <input   type="date"   th:field="*{enrollmentDate}"/>
+    <input   type="text"   th:field="*{cpr}"/>
+
+    <input   type="submit"   value="Update"  class="btn" />
+</form>
+
+</body>
+</html>
